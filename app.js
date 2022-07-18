@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const logo = document.querySelector('.logo img');
 
     for(let i = 0; i < options.length; i++) {
-        options[i].addEventListener("click", () => {
+        options[i].addEventListener('click', () => {
             for(let i = 0; i < options.length; i++) {
                 options[i].classList.remove('active');
             }
@@ -38,17 +38,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
         main.classList.toggle('active');
     };
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
         let checkScroll = window.scrollY;
+        let reveals = document.querySelectorAll('.reveal');
+
         if(checkScroll > 0 && body.classList.value === '') {
             topbar.classList.add('topBarShadow');
         } else {
             topbar.classList.remove('topBarShadow');
         }
-    })
 
-    window.addEventListener('scroll', () => {
-        let reveals = document.querySelectorAll('.reveal');
         for(let i = 0; i < reveals.length; i++) {
             let windowHeight = window.innerHeight;
             let revealTop = reveals[i].getBoundingClientRect().top;
@@ -60,7 +59,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 reveals[i].classList.remove('active');
             }
         }
-    });
+    })
 
     contactForm.addEventListener('submit', function(event) {
         event.preventDefault();

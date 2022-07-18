@@ -272,7 +272,7 @@ p {
     color: #fff;
     font-weight: 400;
     letter-spacing: 1px;
-    margin-top: 20px;
+    margin: 20px 0;
     text-decoration: none;
     border-radius: 3px;
     transition: transform .3s;
@@ -284,8 +284,6 @@ p {
 }
 
 .socialMedia {
-    position: absolute;
-    bottom: 20px;
     display: flex;
 }
 
@@ -313,6 +311,8 @@ p {
 }
 
 .adjust {
+    margin: auto;
+    max-width: 1920px;
     position: relative;
     padding: 120px;
     background: var(--white);
@@ -918,7 +918,11 @@ p {
 
     .socialMedia {
         position: relative;
-        margin-top: 40px;
+        margin-top: 20px;
+    }
+
+    .socialMedia li {
+        margin: 0 10px;
     }
 
     .banner .imgBanner {
@@ -1095,4 +1099,10 @@ p {
         top: -3750px;
     }
 
+}
+
+@media (min-width: 1920px) {
+    .career .imgBox img {
+        border-radius: 10px;
+    }
 }
