@@ -310,6 +310,52 @@ p {
     color: #fff;
 }
 
+.arrowDown {
+    display: flex;
+    justify-content: center;
+    border-radius: 60px;
+    position: absolute;
+    bottom: 20px;
+    padding: 10px;
+    width: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.arrowDown i {
+    font-size: 20px;
+    color: var(--black);
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+
+.arrowDown .showMore {
+    position: absolute;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0s;
+    color: var(--black);
+    letter-spacing: 1px;
+}
+
+.arrowDown:hover {
+    width: 140px;
+}
+
+.arrowDown:hover i {
+    transform: scale(0);
+    transition-delay: 0s;
+}
+
+.arrowDown:hover .showMore {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.25s;
+}
+
 .adjust {
     margin: auto;
     max-width: 1920px;
